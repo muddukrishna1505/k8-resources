@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: roboshop-project
+  name: roboshop
   labels:
     environment: dev
     project: roboshop
