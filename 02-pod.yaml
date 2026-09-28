@@ -3,9 +3,9 @@ kind: pod
 metadata:
   name: nginx-pod
   labels:
-    app: nginx
+    project: roboshop
 spec:
   containers:
   - name: nginx
-    image: nginx:latest
+    image: nginx
    
