@@ -13,8 +13,8 @@ spec:
     component: frontend
   ports:
     - type: TCP
-      port: 80
-      targetPort: 9376
+      port: 80 #service port
+      targetPort: 80 #container port
 ---
 apiVersion: v1
 kind: Pod
