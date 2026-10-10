@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicaset-demo
+  labels:
+    project: roboshop
+    tier: frontend
+    component: frontend
+spec:
+# modify replicas according to your requirement
+  replicas: 2
+  selector:
+  #replica set uses the below labels to select the pods
+    matchLabels:
+      project: roboshop
+      tier: frontend
+      component: frontend
+  #pod definition. pod is subset of replica set.    
+  template:
+    metadata:
+      labels:
+        project: roboshop
+        tier: frontend
+        component: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:trixie-otel        
